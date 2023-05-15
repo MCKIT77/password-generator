@@ -121,18 +121,13 @@ function generatePassword() {
   var lengthRest = +options.length - +guaranteedCharacters.length;
   console.log(lengthRest);
   //at this point, the possibleCharacters array is ready to be randomized based on the length - guaranteedCharacters.length
-  console.log(possibleCharacters);
-
-  // function getRest(lengthRest) {
+  // console.log(possibleCharacters);
 
 
-  // }
-
-  // getRest();
-
+  // getting rest of password
   for (i = 0; i < lengthRest; i++) {
     result.push(getRandom(possibleCharacters));
-    console.log(result);
+    // console.log(result);
 
   }
 
