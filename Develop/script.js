@@ -21,13 +21,18 @@ function getPasswordOptions() {
 
   // Variable to store length of password from user input
   var length = parseInt(
-    prompt('How many characters would you like your password to contain?'),
+    prompt('How many characters would you like your password to contain? (Between 8 and 128 characters)'),
     10
+
   );
 
 
 
-
+  if (length < 8) {
+    getPasswordOptions()
+  } else if (length > 128) {
+    getPasswordOptions();
+  }
 
   // Conditional statement to check if password length is a number. Prompts end if this evaluates false
   if (Number.isNaN(length)) {
